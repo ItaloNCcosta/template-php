@@ -29,7 +29,6 @@ class Router
                 }
 
                 $controller = self::instantiateController($route[self::ACTION][self::CONTROLLER_NAME]);
-                file_put_contents('log.txt', 'Controlador instanciado: ' . get_class($controller) . PHP_EOL, FILE_APPEND);
 
                 if (!$controller) {
                     continue;
@@ -57,7 +56,7 @@ class Router
         } catch (Exception $e) {
             http_response_code($e->getCode() === 404 ? 404 : 500);
             echo "Erro: " . $e->getMessage();
-            file_put_contents('log.txt', 'Erro capturado: ' . $e->getMessage() . PHP_EOL, FILE_APPEND);
+            file_put_contents('../var/logs/log.txt', 'Erro capturado: ' . $e->getMessage() . PHP_EOL, FILE_APPEND);
             ob_end_flush();
         }
     }

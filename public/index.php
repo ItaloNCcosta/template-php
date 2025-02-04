@@ -19,4 +19,5 @@ try {
 } catch (\Exception $e) {
     echo $e->getMessage();
     http_response_code($e->getCode());
+    file_put_contents('../var/logs/log.txt', 'Erro capturado: ' . $e->getMessage() . PHP_EOL, FILE_APPEND);
 }
