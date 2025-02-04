@@ -3,16 +3,8 @@
 declare(strict_types=1);
 
 use App\Controllers\HomeController;
-use App\Controllers\UserController;
 use App\Enums\HttpMethodEnum;
 
 return [
-    ['',  [HomeController::class, 'index'], HttpMethodEnum::GET],
-    ['users/create',  [UserController::class, 'create'], HttpMethodEnum::GET],
-    ['users/{id}',  [UserController::class, 'show'], HttpMethodEnum::GET],
-    ['users',  [UserController::class, 'index'], HttpMethodEnum::GET],
-    ['users',  [UserController::class, 'store'], HttpMethodEnum::POST],
-    ['users/edit/{id}',  [UserController::class, 'edit'], HttpMethodEnum::GET],
-    ['users/update/{id}',  [UserController::class, 'update'], HttpMethodEnum::POST],
-    ['users/delete/{id}',  [UserController::class, 'destroy'], HttpMethodEnum::POST],
+    ['',  [HomeController::class, 'index'], HttpMethodEnum::GET]
 ];
