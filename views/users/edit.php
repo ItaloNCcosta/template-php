@@ -4,7 +4,6 @@ use App\Http\Request;
 
 $title = "CRUD users - Edit";
 
-ob_start();
 ?>
 
 <div class="container">
@@ -17,14 +16,9 @@ ob_start();
                 <input type="text" name="name" placeholder="Name" value="<?php echo htmlspecialchars($user->getName()); ?>" required>
                 <input type="email" name="email" placeholder="E-mail" value="<?php echo htmlspecialchars($user->getEmail()); ?>" required>
                 <input type="password" name="password" placeholder="Senha" value="<?php echo htmlspecialchars($user->getPassword()); ?>" required>
+                <a class="btn btn-primary text-white" href="/users">back</a>
                 <button class="btn btn-success text-white" type="submit">Save</button>
             </form>
         </div>
     </div>
 </div>
-
-<?php
-
-$content = ob_get_clean();
-
-require_once 'layout.php';

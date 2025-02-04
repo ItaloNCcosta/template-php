@@ -21,19 +21,19 @@ class UserController extends AbstractController
     {
         $users = $this->userRepository->list();
 
-        $this->view('index', ['users' => $users]);
+        $this->view('users/index', ['users' => $users]);
     }
 
     public function show(int $id): void
     {
         $user = $this->userRepository->find($id);
 
-        $this->view('show', ['user' => $user]);
+        $this->view('users/show', ['user' => $user]);
     }
 
     public function create(): void
     {
-        $this->view('create');
+        $this->view('users/create');
     }
 
     public function store(): void
@@ -55,7 +55,7 @@ class UserController extends AbstractController
     {
         $user = $this->userRepository->find($id);
 
-        $this->view('edit', ['user' => $user]);
+        $this->view('users/edit', ['user' => $user]);
     }
 
     public function update(int $id): void

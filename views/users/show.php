@@ -2,13 +2,13 @@
 
 $title = "CRUD users - Show";
 
-ob_start();
 ?>
 
 <div class="container">
     <div class="row">
         <h1>Show</h1>
     </div>
+    <a class="btn btn-primary text-white" href="/users">back</a>
     <div class="row flex-center">
         <div class="form-div">
             <p>
@@ -21,9 +21,3 @@ ob_start();
         </div>
     </div>
 </div>
-
-<?php
-
-$content = ob_get_clean();
-
-require_once 'layout.php';

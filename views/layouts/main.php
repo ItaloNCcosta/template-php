@@ -13,7 +13,7 @@
         <?php include dirname(__DIR__, 2) . '/views/_partials/navbar.php'; ?>
     </header>
 
-    <main>
+    <main class="container">
         <?= $content; ?>
     </main>
 

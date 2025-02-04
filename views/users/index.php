@@ -4,17 +4,16 @@ use App\Http\Request;
 
 $title = "CRUD users - List";
 
-ob_start();
 ?>
 
-<div class="container">
+<div class="">
     <h1>List</h1>
-
-    <table class="table-users">
+    <a class="btn btn-primary text-white" href="/users/create">Create</a>
+    <table class="table">
         <tr>
-            <th>Name</th>
-            <th>E-mail</th>
-            <th>Actions</th>
+            <th scope="col">Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Actions</th>
         </tr>
         <?php if (empty($users)): ?>
             <tr>
@@ -29,10 +28,10 @@ ob_start();
                     <td class="user-email">
                         <?php echo htmlspecialchars($user->email); ?>
                     </td>
-                    <td>
-                        <a class="btn btn-primary text-white" href="<?php echo Request::getBaseUrl(); ?>/users/<?php echo htmlspecialchars($user->id); ?>">Show</a>
-                        <a class="btn btn-primary text-white" href="<?php echo Request::getBaseUrl(); ?>/users/edit/<?php echo htmlspecialchars($user->id); ?>">Edit</a>
-                        <form class="inline-block" action="<?php echo Request::getBaseUrl(); ?>/users/delete/<?php echo htmlspecialchars($user->id); ?>" method="POST" onsubmit="return confirm('Certeza?')">
+                    <td class="d-flex">
+                        <a class="btn btn-primary text-white" href="/users/<?php echo htmlspecialchars($user->id); ?>">Show</a>
+                        <a class="btn btn-primary text-white" href="/users/edit/<?php echo htmlspecialchars($user->id); ?>">Edit</a>
+                        <form class="inline-block" action="/users/delete/<?php echo htmlspecialchars($user->id); ?>" method="POST" onsubmit="return confirm('Certeza?')">
                             <button class="btn btn-danger text-white" type="submit">Delete</button>
                         </form>
                     </td>
@@ -41,9 +40,3 @@ ob_start();
         <?php endif; ?>
     </table>
 </div>
-
-<?php
-
-$content = ob_get_clean();
-
-require_once 'layout.php';
