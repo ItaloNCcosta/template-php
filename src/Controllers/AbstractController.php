@@ -10,9 +10,11 @@ abstract class AbstractController
     {
         extract($data);
 
-        // include dirname(__DIR__, 2).'/views/_partials/head.php';
-        include("../views/{$view}.php");
-        // include dirname(__DIR__, 2).'/views/_partials/footer.php';
+        ob_start();
+        include dirname(__DIR__, 2) . "/views/{$view}.php";
+        $content = ob_get_clean();
+
+        include dirname(__DIR__, 2) . "/views/layouts/main.php";
     }
 
     public function redirect(string $routeName = ''): object

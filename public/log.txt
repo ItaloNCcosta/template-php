@@ -390,3 +390,21 @@ Controlador instanciado: App\Controllers\UserController
 Controlador instanciado: App\Controllers\UserController
 Controlador instanciado: App\Controllers\UserController
 Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\HomeController
+Controlador instanciado: App\Controllers\HomeController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Erro capturado: Not found router or controller or method
+Controlador instanciado: App\Controllers\HomeController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\HomeController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Controlador instanciado: App\Controllers\UserController
+Erro capturado: Not found router or controller or method
+Controlador instanciado: App\Controllers\HomeController
