@@ -2,10 +2,12 @@
 
 declare(strict_types=1);
 
+use App\Controllers\HomeController;
 use App\Controllers\UserController;
 use App\Enums\HttpMethodEnum;
 
 return [
+    ['',  [HomeController::class, 'index'], HttpMethodEnum::GET],
     ['users/create',  [UserController::class, 'create'], HttpMethodEnum::GET],
     ['users/{id}',  [UserController::class, 'show'], HttpMethodEnum::GET],
     ['users',  [UserController::class, 'index'], HttpMethodEnum::GET],
